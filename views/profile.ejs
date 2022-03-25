@@ -1,0 +1,47 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body        { padding-top:80px; word-wrap:break-word; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- FACEBOOK INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+
+                    <p>
+                        <strong>id</strong>: <%= user.uid %><br>
+                        <strong>token</strong>: <%= user.token %><br>
+                        <strong>email</strong>: <%= user.email %><br>
+                        <strong>name</strong>: <%= user.name %><br>
+                        <strong>gender</strong>: <%= user.gender %><br>
+                        <img src="<%=user.pic%>" width="200" height="200" alt="">
+
+                    </p>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
